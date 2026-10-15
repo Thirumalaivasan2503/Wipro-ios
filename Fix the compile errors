@@ -1,0 +1,12 @@
+let price: Double = 300
+var quantity: Int = 3
+let taxRate: Double = 0.18
+let subtotal = price * Double(quantity)
+let tax = subtotal * taxRate
+let total = subtotal + tax
+var title = "Order"
+// title = 42
+print("Title: \(title)")
+print("Subtotal: \(subtotal)")
+print("Tax: \(tax)")
+print("Total including tax: \(total)")
