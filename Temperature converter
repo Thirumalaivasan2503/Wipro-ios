@@ -1,0 +1,16 @@
+import Foundation
+let factor = 9.0 / 5.0
+let offset = 32.0
+let kelvinOffset = 273.15
+var celsius = 25.0
+var fahrenheit = celsius * factor + offset
+var kelvin = celsius + kelvinOffset
+print("Celsius: \(celsius)")
+print("Fahrenheit: \(String(format: "%.1f", fahrenheit))")
+print("Kelvin: \(String(format: "%.1f", kelvin))")
+celsius = 30.0
+fahrenheit = celsius * factor + offset
+kelvin = celsius + kelvinOffset
+print("Celsius: \(celsius)")
+print("Fahrenheit: \(String(format: "%.1f", fahrenheit))")
+print("Kelvin: \(String(format: "%.1f", kelvin))")
