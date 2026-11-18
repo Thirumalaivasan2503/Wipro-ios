@@ -1,0 +1,42 @@
+// Array
+var fruits = ["Apple", "Banana", "Orange"]
+print(fruits[0])                    // Apple
+print(fruits[1])                    // Banana
+fruits.append("Mango")
+print(fruits)                       // ["Apple", "Banana", "Orange", "Mango"]
+fruits.remove(at: 1)
+print(fruits)                       // ["Apple", "Orange", "Mango"]
+fruits.insert("Graphs",at:1)
+print(fruits)                       // ["Apple", "Graphs", "Orange", "Mango"]
+print(fruits.count)                 // 4
+print(fruits.isEmpty)               // false
+
+// Set
+var set1: Set = [10, 20, 30, 40]
+var set2: Set = [30, 40, 50, 60]
+set1.insert(70)
+print(set1)                         // [10, 20, 70, 40, 30]
+set1.remove(20)
+print(set1)                         // [10, 70, 40, 30]
+print(set1.contains(10))            // true
+print(set1.count)                   // 4
+print(set1.union(set2))             // [10, 70, 50, 40, 30, 60]
+print(set1.intersection(set2))      // [30, 40]
+print(set1.subtracting(set2))       // [70, 10]
+
+// Dictionary
+var student = [
+    "name": "Ravi",
+    "age": "20",
+    "department": "AI&DS"
+]
+print(student["name"]!)                     // Ravi
+print(student)                              // ["name": "Ravi", "age": "20", "department": "AI&DS"]
+student.updateValue("21", forKey: "age")
+print(student)                              // ["name": "Ravi", "age": "21", "department": "AI&DS"]
+student.removeValue(forKey: "department")
+print(student)                              // ["name": "Ravi", "age": "21"]
+print(student.count)                         // 2
+print(student.keys)                         // ["name", "age"]
+print(student.values)                       // ["Ravi", "21"]
+print(student.isEmpty)                      // false
