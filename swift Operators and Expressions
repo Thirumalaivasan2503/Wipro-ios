@@ -1,0 +1,39 @@
+//arithmetic operator
+let a=10
+let b=5
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+print(a%3)
+//assignment operator
+var number = 10
+number += 5
+print(number)
+number -=  5
+print(number)
+number *= 2
+print(number)
+number /= 4
+print(number)
+// Comparison Operators
+let a = 10
+let b = 5
+print(a == b)
+print(a != b)
+print(a > b)
+print(a < b)
+//Increment and Decrement
+var number = 10
+number += 2
+print(number)
+number -= 3
+print(number)
+// Range Operators
+for number in 1...5 {
+    print(number)
+}
+Half-Open Range
+for number in 1..<5 {
+    print(number)
+}
