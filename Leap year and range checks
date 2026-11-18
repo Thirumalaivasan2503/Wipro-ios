@@ -1,0 +1,33 @@
+import Foundation
+let year1 = 1900
+let year2 = 2000
+let year3 = 2024
+let year4 = 2026
+let leap1 = (year1 % 4 == 0) && ((year1 % 100 != 0) || (year1 % 400 == 0))
+let leap2 = (year2 % 4 == 0) && ((year2 % 100 != 0) || (year2 % 400 == 0))
+let leap3 = (year3 % 4 == 0) && ((year3 % 100 != 0) || (year3 % 400 == 0))
+let leap4 = (year4 % 4 == 0) && ((year4 % 100 != 0) || (year4 % 400 == 0))
+
+print("1900 is Leap Year: \(leap1)")
+print("2000 is Leap Year: \(leap2)")
+print("2024 is Leap Year: \(leap3)")
+print("2026 is Leap Year: \(leap4)")
+
+// 2. Check Number Between 1 and 100
+let number = 50
+let isInRange = (1...100).contains(number)
+
+print("Number is between 1 and 100: \(isInRange)")
+
+// 3. Even Number and Not Multiple of 10
+let num = 24
+let isEven = (num % 2 == 0) && (num % 10 != 0)
+
+print("Even and not multiple of 10: \(isEven)")
+
+// 4. Optional Nickname using Nil Coalescing Operator
+let nickname: String? = nil
+
+let displayName = nickname ?? "Guest"
+
+print("Welcome, \(displayName)")
