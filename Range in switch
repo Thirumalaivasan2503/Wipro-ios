@@ -1,0 +1,11 @@
+var mark = 85
+switch mark {
+case 90...100:
+    print("Excellent")
+case 70..<90:
+    print("Good")
+case 50..<70:
+    print("Average")
+default:
+    print("Needs improvement")
+}
