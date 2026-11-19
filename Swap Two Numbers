@@ -1,0 +1,7 @@
+var a = 10
+var b = 20
+let temp = a
+a = b
+b = temp
+print("A =", a)
+print("B =", b)
