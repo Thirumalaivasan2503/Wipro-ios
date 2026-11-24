@@ -1,0 +1,53 @@
+import Foundation
+
+enum BookStatus {
+    case available
+    case borrowed(by: String, dueIns: Int)
+    case reserved(for: String)
+
+    var label: String {
+        switch self {
+        case .available:
+            return "Available"
+
+        case .borrowed(let name, let days):
+            return "Borrowed by \(name), Due in \(days) days"
+
+        case .reserved(let name):
+            return "Reserved for \(name)"
+        }
+    }
+}
+
+struct Book {
+    var title: String
+    var status: BookStatus = .available
+}
+
+class Member {
+    var name: String
+    var borrowedBooks: [String]
+
+    init(name: String, borrowedBooks: [String] = []) {
+        self.name = name
+        self.borrowedBooks = borrowedBooks
+    }
+}
+
+var book1 = Book(title: "Swift Programming")
+
+var book2 = book1
+
+book2.status = .borrowed(by: "Vasan", dueIns: 7)
+
+print("Book 1:", book1.title, "-", book1.status.label)
+print("Book 2:", book2.title, "-", book2.status.label)
+
+let member1 = Member(name: "Vasan")
+
+let member2 = member1
+
+member2.name = "Arun"
+
+print("Member 1:", member1.name)
+print("Member 2:", member2.name)
