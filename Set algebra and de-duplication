@@ -1,0 +1,29 @@
+import Foundation
+
+let swiftClub: Set<String> = ["Anu", "Ben", "Chitra", "Dev"]
+let uiClub: Set<String> = ["Chitra", "Dev", "Esha"]
+
+let commonMembers = swiftClub.intersection(uiClub)
+print("Members in both clubs:", commonMembers.sorted())
+
+let onlySwift = swiftClub.subtracting(uiClub)
+print("Only Swift club:", onlySwift.sorted())
+
+let everyone = swiftClub.union(uiClub)
+print("Everyone:", everyone.sorted())
+
+let exactlyOne = swiftClub.symmetricDifference(uiClub)
+print("Exactly one club:", exactlyOne.sorted())
+
+let numbers = [3, 1, 3, 2, 1, 4]
+
+var uniqueNumbers: [Int] = []
+
+for number in numbers {
+    if !uniqueNumbers.contains(number) {
+        uniqueNumbers.append(number)
+    }
+}
+
+print("Original array:", numbers)
+print("After removing duplicates:", uniqueNumbers)
